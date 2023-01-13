@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Resource: Decodable, Identifiable, Equatable {
+struct Resource: Decodable, Identifiable, Equatable, Hashable {
     let id: Int
     let createdTs: Date
     let creatorId: Int

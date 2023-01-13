@@ -90,7 +90,8 @@ struct MemoCard: View {
             }
         }
         .sheet(isPresented: $showingEdit) {
-            MemoInput(memo: memo)
+            MemoInputView(memo: memo)
+                .interactiveDismissDisabled()
         }
         .confirmationDialog("Delete this memo?", isPresented: $showingDeleteConfirmation, titleVisibility: .visible) {
             Button("Yes", role: .destructive) {
